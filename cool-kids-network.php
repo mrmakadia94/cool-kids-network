@@ -22,3 +22,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 define( 'CKN_VERSION', '1.0.0' );
 define( 'CKN_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'CKN_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
+
+// Include required files.
+require_once CKN_PLUGIN_DIR . 'includes/class-cool-kids-network.php';
+require_once CKN_PLUGIN_DIR . 'includes/class-character-generator.php';
+require_once CKN_PLUGIN_DIR . 'includes/class-user-roles.php';
+require_once CKN_PLUGIN_DIR . 'includes/class-api.php';
