@@ -1,0 +1,150 @@
+.ckn-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.ckn-field {
+    margin-bottom: 20px;
+}
+
+.ckn-field label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.ckn-field input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.ckn-submit {
+    background-color: #0073aa;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.ckn-submit:hover {
+    background-color: #005177;
+}
+
+.ckn-character-profile {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.ckn-character-info {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 20px;
+}
+
+.ckn-character-info p {
+    margin: 10px 0;
+}
+
+.ckn-character-info strong {
+    display: inline-block;
+    width: 100px;
+}
+
+.ckn-signup-button {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.ckn-signup-button .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0073aa;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.ckn-signup-button .button:hover {
+    background-color: #005177;
+}
+
+/* User listing styles */
+.ckn-user-listing {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.ckn-users-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+}
+
+.ckn-users-table th,
+.ckn-users-table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.ckn-users-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.ckn-users-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.ckn-users-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Login form styles */
+.ckn-login-form h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.ckn-error {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.ckn-signup-link {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.ckn-signup-link a {
+    color: #0073aa;
+    text-decoration: none;
+}
+
+.ckn-signup-link a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .ckn-character-info strong {
+        display: block;
+        width: auto;
+        margin-bottom: 5px;
+    }
+    
+    .ckn-users-table {
+        display: block;
+        overflow-x: auto;
+    }
+}
