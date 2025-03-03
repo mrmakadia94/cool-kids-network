@@ -6,6 +6,10 @@ A WordPress plugin for managing users in the Cool Kids Network game.
 
 Cool Kids Network is a WordPress plugin that provides a user management system for a fictional game. It allows users to sign up with just an email address, automatically generates character profiles, and implements a role-based permission system.
 
+## Links
+Website for access projects.
+https://wpmeet.in/rankmath-test/
+
 ## Features
 
 - **Simple Signup Process**: Users can register with just an email address
