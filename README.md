@@ -199,9 +199,6 @@ composer phpcbf
 
 ```
 cool-kids-network/
-├── .github/
-│   └── workflows/
-│       └── ci.yml              # GitHub Actions CI configuration
 ├── assets/
 │   └── css/
 │       └── style.css           # Plugin styles
