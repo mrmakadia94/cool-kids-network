@@ -57,19 +57,32 @@ class Cool_Kids_API {
 	}
 
 	/**
-	 * Check API permission using JWT authentication
+	 * Check API permission using role capabilities
 	 *
 	 * @param WP_REST_Request $request Request object.
+	 *
 	 * @return bool|WP_Error
 	 */
 	public function check_permission( $request ) {
 		// Get the current user
-		$user = wp_get_current_user();
+		$user_id = get_current_user_id();
 
-		if ( empty( $user->ID ) || ! in_array( 'administrator', (array) $user->roles, true ) ) {
+		if ( empty( $user_id ) ) {
 			return new WP_Error(
 				'rest_forbidden',
-				__( 'You do not have permission to access this API.', 'cool-kids-network' ),
+				__( 'You must be logged in to access this API.', 'cool-kids-network' ),
+				array( 'status' => 401 )
+			);
+		}
+
+		// Initialize User_Roles class
+		$roles = new User_Roles();
+
+		// Check if user has permission to edit character roles
+		if ( ! $roles->can_edit_character_roles( $user_id ) ) {
+			return new WP_Error(
+				'rest_forbidden',
+				__( 'You do not have permission to edit character roles.', 'cool-kids-network' ),
 				array( 'status' => 403 )
 			);
 		}
@@ -82,7 +95,7 @@ class Cool_Kids_API {
 	 *
 	 * @param WP_REST_Request $request Request object.
 	 *
-	 * @return WP_REST_Response
+	 * @return WP_REST_Response|WP_Error
 	 */
 	public function assign_role( $request ) {
 		$email      = $request->get_param( 'email' );
